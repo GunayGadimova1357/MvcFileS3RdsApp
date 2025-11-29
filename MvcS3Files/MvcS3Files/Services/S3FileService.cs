@@ -13,7 +13,7 @@ public class S3FileService
     {
         _s3Client = s3Client;
         _bucketName = config["AWS:BucketName"]!;
-        Console.WriteLine($"🪣 Using bucket: {_bucketName}");
+        //Console.WriteLine($"Using bucket: {_bucketName}");
     }
     
     public async Task<string> UploadAsync(IFormFile file)
@@ -53,7 +53,7 @@ public class S3FileService
     
     public async Task DeleteAsync(string key)
     {
-        Console.WriteLine($"🗑 Deleting from bucket: {_bucketName}, key: {key}");
+        //Console.WriteLine($"Deleting from bucket: {_bucketName}, key: {key}");
 
         try
         {
