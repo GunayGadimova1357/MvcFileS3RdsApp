@@ -1,0 +1,19 @@
+@model MvcS3Files.Models.FileItem
+
+<h2>Upload New File</h2>
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <label>Name</label>
+    <input asp-for="Name" class="form-control"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    
+    <label>Description</label>
+    <textarea asp-for="Description" class="form-control"></textarea>
+
+    <label>Select file</label>
+    <input type="file" name="file" class="form-control"/>
+
+    <button class="btn btn-primary">Upload</button>
+    <div asp-validation-summary="ModelOnly"></div>
+
+</form>
